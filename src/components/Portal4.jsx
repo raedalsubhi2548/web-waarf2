@@ -40,6 +40,15 @@ const Portal4 = ({ onBack }) => {
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.9),rgba(240,230,220,0.4))] pointer-events-none" />
 
+      {/* Back Button */}
+      <button 
+        onClick={onBack}
+        className="fixed top-6 left-6 z-50 bg-white/80 backdrop-blur-md border border-[#380001]/20 text-[#380001] px-4 py-2 rounded-full font-bold shadow-lg hover:bg-[#380001] hover:text-white transition-all flex items-center gap-2 group"
+      >
+        <span className="group-hover:-translate-x-1 transition-transform">→</span>
+        <span>رجوع</span>
+      </button>
+
       <div className="relative z-10 w-full max-w-md bg-white/60 backdrop-blur-md border border-brand-accent/10 p-8 rounded-sm shadow-xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-8">تواصل معنا</h2>
         
@@ -71,15 +80,7 @@ const Portal4 = ({ onBack }) => {
           </a>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-brand-accent/10">
-          <button 
-            onClick={onBack}
-            className="text-brand-dark font-bold text-lg hover:opacity-70 transition-opacity flex items-center justify-center gap-2 mx-auto"
-          >
-            <span>←</span>
-            <span>رجوع</span>
-          </button>
-        </div>
+
       </div>
     </motion.div>
   );

@@ -49,17 +49,17 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
             </div>
 
             {/* Links */}
-            <div className="flex-1 flex flex-col py-6 px-4 gap-2 overflow-y-auto">
+            <div className="flex-1 flex flex-col py-6 px-6 gap-4 overflow-y-auto">
               {links.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => { onNavigate(link.id); onClose(); }}
-                  className="flex items-center justify-between w-full p-4 rounded-xl text-[#380001] hover:bg-[#380001]/5 transition-all border border-transparent hover:border-[#380001]/10 group"
+                  className="flex items-center w-full p-4 rounded-sm bg-[#fdfaf1] border border-[#380001]/20 text-[#380001] hover:bg-[#380001] hover:text-[#fdfaf1] transition-all shadow-sm group gap-4"
                 >
-                  <span className="text-lg font-bold">{link.label}</span>
-                  <span className="text-[#380001] group-hover:scale-110 transition-transform duration-300 bg-[#380001]/5 p-2 rounded-lg">
+                  <span className="text-[#380001] group-hover:text-[#fdfaf1] transition-colors bg-[#380001]/5 group-hover:bg-white/10 p-2 rounded-md">
                     {link.icon}
                   </span>
+                  <span className="text-lg font-bold">{link.label}</span>
                 </button>
               ))}
             </div>

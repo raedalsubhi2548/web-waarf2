@@ -46,9 +46,10 @@ const Portal2 = ({ onNext, onBack }) => {
       {/* Back Button */}
       <button 
         onClick={onBack}
-        className="absolute top-4 right-4 z-50 text-brand-dark font-bold text-lg hover:opacity-70 transition-opacity"
+        className="fixed top-6 left-6 z-50 bg-white/80 backdrop-blur-md border border-[#380001]/20 text-[#380001] px-4 py-2 rounded-full font-bold shadow-lg hover:bg-[#380001] hover:text-white transition-all flex items-center gap-2 group"
       >
-        رجوع
+        <span className="group-hover:-translate-x-1 transition-transform">→</span>
+        <span>رجوع</span>
       </button>
 
       {/* Top Title - Non-negotiable */}
