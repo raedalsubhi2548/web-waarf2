@@ -64,12 +64,12 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
           
           {/* Drawer */}
           <motion.div 
-            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-brand-light z-[70] shadow-2xl flex flex-col overflow-hidden border-l border-brand-accent/10"
+            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-[#fdfaf1] z-[70] shadow-2xl flex flex-col overflow-hidden border-l border-brand-accent/10"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside drawer
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-brand-accent/10 relative h-24">
@@ -83,8 +83,8 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
                 </svg>
               </button>
               
-              {/* Logo Centered - High Z-Index, No Overlay */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 z-50 pointer-events-none">
+              {/* Logo Centered - Corrected URL, No Overlay */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
                 <img 
                   src="https://k.top4top.io/p_3680h4ygv1.png" 
                   alt="Warf Logo" 
@@ -94,7 +94,7 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
             </div>
 
             {/* Links */}
-            <div className="flex-1 flex flex-col py-8 px-6 gap-3 overflow-y-auto">
+            <div className="flex-1 flex flex-col py-6 px-6 gap-2 overflow-y-auto">
               {links.map((link) => (
                 <button
                   key={link.id}
@@ -102,13 +102,13 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
                     onNavigate(link.id);
                     onClose();
                   }}
-                  className="flex items-center gap-4 w-full text-right p-4 rounded-lg text-[#380001] hover:bg-[#380001]/5 transition-all border border-transparent hover:border-[#380001]/10 group"
+                  className="flex items-center justify-end gap-4 w-full text-right p-3 rounded-lg text-[#380001] hover:bg-[#380001]/5 transition-all border border-transparent hover:border-[#380001]/10 group"
                 >
-                  <span className="text-[#380001] group-hover:scale-110 transition-transform duration-300">
-                    {link.icon}
-                  </span>
                   <span className="text-lg font-bold">
                     {link.label}
+                  </span>
+                  <span className="text-[#380001] group-hover:scale-110 transition-transform duration-300">
+                    {link.icon}
                   </span>
                 </button>
               ))}
