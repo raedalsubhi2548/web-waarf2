@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Portal1 from './components/Portal1';
 import Portal2 from './components/Portal2';
-import Portal3 from './components/Portal3';
 import Portal4 from './components/Portal4';
 import PolicyScreen from './components/PolicyScreen';
 import MobileMenu from './components/MobileMenu';
@@ -30,8 +29,7 @@ function App() {
     } else {
       // Default fallbacks if stack is empty (shouldn't happen)
       if (currentPortal === 'policy') setCurrentPortal(1);
-      else if (currentPortal === 4) setCurrentPortal(3);
-      else if (currentPortal === 3) setCurrentPortal(2);
+      else if (currentPortal === 4) setCurrentPortal(2);
       else if (currentPortal === 2) setCurrentPortal(1);
     }
   };
@@ -41,11 +39,9 @@ function App() {
       case 1:
         return <Portal1 key="portal1" onNext={() => goToPortal(2)} />;
       case 2:
-        return <Portal2 key="portal2" onNext={() => goToPortal(3)} onBack={() => goToPortal(1)} />;
-      case 3:
-        return <Portal3 key="portal3" onBack={() => goToPortal(2)} />;
+        return <Portal2 key="portal2" onNext={() => goToPortal(4)} onBack={() => goToPortal(1)} />;
       case 4:
-        return <Portal4 key="portal4" onBack={() => goBack()} />;
+        return <Portal4 key="portal4" onBack={() => goToPortal(2)} />;
       case 'policy':
         return <PolicyScreen key="policy" onBack={() => goBack()} />;
       default:

@@ -5,25 +5,22 @@ import Modal from './Modal';
 const portalVariants = {
   initial: { 
     opacity: 0, 
-    scale: 1.1, 
-    filter: "blur(10px)" 
+    scale: 1,
   },
   animate: { 
     opacity: 1, 
     scale: 1, 
-    filter: "blur(0px)",
     transition: { 
-      duration: 1.5, 
-      ease: [0.22, 1, 0.36, 1] 
+      duration: 0.5, 
+      ease: "easeOut" 
     }
   },
   exit: { 
     opacity: 0, 
-    scale: 0.95, 
-    filter: "blur(10px)",
+    scale: 1,
     transition: { 
-      duration: 0.8, 
-      ease: [0.22, 1, 0.36, 1] 
+      duration: 0.3, 
+      ease: "easeIn" 
     }
   }
 };
@@ -108,20 +105,6 @@ const Portal2 = ({ onNext, onBack }) => {
                 className="w-full bg-transparent hover:bg-brand-accent/10 text-brand-dark border-2 border-brand-accent/40 hover:border-brand-accent py-3 rounded-sm transition-all font-semibold"
               >
                 عرض مواصفات العباية
-              </button>
-            </div>
-
-            {/* Gallery Link - Split Style */}
-            <div className="mt-4 pt-4 border-t border-brand-accent/10 w-full flex flex-col gap-3">
-              <p className="text-brand-dark font-medium text-lg">
-                تبين تشوفين صور أكثر عن عباية وارف؟
-              </p>
-              
-              <button 
-                onClick={onNext}
-                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-3 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center gap-2 border border-[#2a0001]"
-              >
-                <span className="font-bold text-base">ادخلي المعرض</span>
               </button>
             </div>
           </motion.div>
