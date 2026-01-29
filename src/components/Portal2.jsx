@@ -30,8 +30,8 @@ const Portal2 = ({ onNext, onBack }) => {
 
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-[100dvh] flex flex-col items-center overflow-y-auto bg-brand-light"
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)', paddingTop: 'env(safe-area-inset-top)' }}
+      className="absolute inset-0 w-full h-[100dvh] flex flex-col items-center overflow-hidden bg-brand-light"
+      style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 3.5rem)', paddingTop: 'env(safe-area-inset-top)' }}
       variants={portalVariants}
       initial="initial"
       animate="animate"
@@ -43,81 +43,84 @@ const Portal2 = ({ onNext, onBack }) => {
       {/* Back Button */}
       <button 
         onClick={onBack}
-        className="fixed top-6 left-6 z-50 bg-white/80 backdrop-blur-md border border-[#380001]/20 text-[#380001] px-4 py-2 rounded-full font-bold shadow-lg hover:bg-[#380001] hover:text-white transition-all flex items-center gap-2 group"
+        className="fixed top-4 left-4 z-50 bg-white/80 backdrop-blur-md border border-[#380001]/20 text-[#380001] px-3 py-1.5 rounded-full font-bold shadow-md hover:bg-[#380001] hover:text-white transition-all flex items-center gap-2 group text-sm"
       >
         <span className="group-hover:-translate-x-1 transition-transform">→</span>
         <span>رجوع</span>
       </button>
 
       {/* Top Title - Non-negotiable */}
-      <div className="relative z-20 w-full text-center mt-2 mb-0.5 md:mt-4 md:mb-2 flex-shrink-0">
-        <h2 className="text-base md:text-2xl font-bold text-brand-dark tracking-wide">
+      <div className="relative z-20 w-full text-center mt-1 flex-shrink-0">
+        <h2 className="text-xs md:text-xl font-bold text-brand-dark tracking-wide">
           تصميم وارف الحصري
         </h2>
       </div>
 
-      <div className="relative z-10 w-full flex-1 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center p-1 md:p-6 gap-1 md:gap-6 min-h-0">
+      <div className="relative z-10 w-full flex-1 max-w-lg mx-auto flex flex-col items-center justify-center gap-1 p-2 min-h-0">
         
-        {/* Model Side */}
-        <div className="w-full md:w-1/2 h-[18vh] md:h-[60vh] flex items-center justify-center order-1 md:order-1 flex-shrink-0">
-          <div className="relative h-full w-auto aspect-[3/4] md:aspect-[2/3] border-[2px] border-[#380001] p-1 rounded-t-full rounded-b-sm shadow-lg bg-white/30 backdrop-blur-sm">
-            <div className="absolute inset-0 rounded-t-full rounded-b-sm border border-brand-accent/10 m-0.5" />
+        {/* Model Side - Significantly reduced height */}
+        <div className="w-full flex items-center justify-center flex-shrink-1 h-[28vh]">
+          <div className="relative h-full w-auto aspect-[3/4] border-[1px] border-[#380001] p-0.5 rounded-t-[1.5rem] rounded-b-sm shadow-sm bg-white/30 backdrop-blur-sm">
+            <div className="absolute inset-0 rounded-t-[1.5rem] rounded-b-sm border border-brand-accent/10 m-0.5" />
             <img 
               src="https://b.top4top.io/p_3679j55am1.png" 
               alt="Warf Abaya Model" 
-              className="w-full h-full object-cover rounded-t-full rounded-b-sm shadow-sm"
+              className="w-full h-full object-cover rounded-t-[1.5rem] rounded-b-sm shadow-sm"
             />
           </div>
         </div>
 
         {/* Product Card Side */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-right order-2 md:order-2 flex-shrink min-h-0 pb-1 md:pb-0">
+        <div className="w-full flex flex-col items-center text-center flex-shrink-0">
           <motion.div 
-            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-2 md:p-8 rounded-sm shadow-lg max-w-lg w-full flex flex-col justify-center"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-1.5 rounded-sm shadow-sm w-full flex flex-col justify-center"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
           >
             
-            <h2 className="text-xl md:text-4xl font-bold text-brand-dark mb-0.5">عباية وارف</h2>
-            <p className="text-base md:text-xl text-[#380001] mb-1 font-bold">199 ريال</p>
+            <div className="flex items-baseline justify-center gap-2 mb-0.5">
+              <h2 className="text-base font-bold text-brand-dark">عباية وارف</h2>
+              <p className="text-sm text-[#380001] font-bold">199 ريال</p>
+            </div>
             
-            <div className="max-w-md mx-auto md:mx-0">
-              <p className="text-brand-dark/90 mb-2 leading-[1.4] text-xs md:text-base font-medium">
-                عباية صُممت لتوازن بين الفخامة والراحة…<br/>
-                قصة ناعمة تُبرز الأناقة بدون تكلّف.<br/>
-                مثالية لطلّتك اليومية الراقية.
+            <div className="max-w-xs mx-auto mb-1.5">
+              <p className="text-brand-dark/90 leading-tight text-[9px] font-medium">
+                عباية صُممت لتوازن بين الفخامة والراحة… قصة ناعمة تُبرز الأناقة بدون تكلّف.
               </p>
             </div>
             
-            <div className="flex flex-col gap-1 w-full mb-1 md:mb-0">
+            <div className="flex flex-col gap-1 w-full">
               <a 
                 href="https://wa.me/?text=مرحبا، أود طلب عباية وارف" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-1.5 md:py-3 rounded-sm transition-all text-sm md:text-lg flex items-center justify-center gap-2 border border-[#2a0001] shadow-md font-bold"
+                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-1.5 rounded-sm transition-all text-xs flex items-center justify-center gap-1 border border-[#2a0001] shadow-sm font-bold"
               >
                 اطّلبيها الآن على واتساب
               </a>
               
-              <button 
-                onClick={() => setIsModalOpen(true)}
-                className="w-full bg-transparent hover:bg-brand-accent/10 text-brand-dark border-2 border-brand-accent/40 hover:border-brand-accent py-1.5 md:py-3 rounded-sm transition-all font-semibold text-xs md:text-base"
-              >
-                عرض مواصفات العباية
-              </button>
-              
-              <button 
-                onClick={onNext}
-                className="w-full mt-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-1.5 md:py-3 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-2 text-xs md:text-base"
-              >
-                <span>حابة تشوفي اكثر من صور العباية؟</span>
-                <span className="text-lg">←</span>
-              </button>
+              <div className="flex gap-1.5">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="flex-1 bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-1.5 rounded-sm transition-all font-semibold text-[10px]"
+                >
+                  عرض المواصفات
+                </button>
+                
+                <button 
+                  onClick={onNext}
+                  className="flex-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-1.5 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-1 text-[10px]"
+                >
+                  <span>صور العباية</span>
+                  <span>←</span>
+                </button>
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
+
 
       {/* Specs Modal */}
       <Modal 
