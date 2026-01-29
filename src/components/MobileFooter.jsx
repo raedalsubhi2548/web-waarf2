@@ -19,24 +19,29 @@ const MobileFooter = () => {
       <div className="flex items-center gap-3 opacity-100 flex-row">
         {/* Mada */}
         <div className="h-5 w-auto flex items-center">
-            <img src="https://cdn.worldvectorlogo.com/logos/mada-1.svg" alt="Mada" className="h-full w-auto object-contain" />
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mada_Logo.svg/320px-Mada_Logo.svg.png?v=3" 
+              alt="Mada" 
+              className="h-full w-auto object-contain" 
+            />
         </div>
         
         {/* Visa */}
         <div className="h-4 w-auto flex items-center">
-            <img src="https://cdn.worldvectorlogo.com/logos/visa.svg" alt="Visa" className="h-full w-auto object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/320px-Visa_Inc._logo.svg.png" alt="Visa" className="h-full w-auto object-contain" />
         </div>
 
         {/* MasterCard */}
         <div className="h-6 w-auto flex items-center">
-            <img src="https://cdn.worldvectorlogo.com/logos/mastercard-2.svg" alt="Mastercard" className="h-full w-auto object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png" alt="Mastercard" className="h-full w-auto object-contain" />
         </div>
 
         {/* Apple Pay */}
         <div className="h-6 w-auto flex items-center">
-            <img src="https://cdn.worldvectorlogo.com/logos/apple-pay.svg" alt="Apple Pay" className="h-full w-auto object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/320px-Apple_Pay_logo.svg.png" alt="Apple Pay" className="h-full w-auto object-contain" />
         </div>
       </div>
+
 
     </div>
   );

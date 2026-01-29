@@ -50,17 +50,17 @@ const Portal2 = ({ onNext, onBack }) => {
       </button>
 
       {/* Top Title - Non-negotiable */}
-      <div className="relative z-20 w-full text-center mt-2 mb-1 md:mt-4 md:mb-2 flex-shrink-0">
-        <h2 className="text-lg md:text-2xl font-bold text-brand-dark tracking-wide">
+      <div className="relative z-20 w-full text-center mt-2 mb-0.5 md:mt-4 md:mb-2 flex-shrink-0">
+        <h2 className="text-base md:text-2xl font-bold text-brand-dark tracking-wide">
           تصميم وارف الحصري
         </h2>
       </div>
 
-      <div className="relative z-10 w-full flex-1 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center p-2 md:p-6 gap-2 md:gap-6 min-h-0">
+      <div className="relative z-10 w-full flex-1 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center p-1 md:p-6 gap-1 md:gap-6 min-h-0">
         
         {/* Model Side */}
-        <div className="w-full md:w-1/2 h-[25vh] md:h-[60vh] flex items-center justify-center order-1 md:order-1 flex-shrink-0">
-          <div className="relative h-full w-auto aspect-[3/4] md:aspect-[2/3] border-[2px] border-[#380001] p-1.5 rounded-t-full rounded-b-sm shadow-lg bg-white/30 backdrop-blur-sm">
+        <div className="w-full md:w-1/2 h-[18vh] md:h-[60vh] flex items-center justify-center order-1 md:order-1 flex-shrink-0">
+          <div className="relative h-full w-auto aspect-[3/4] md:aspect-[2/3] border-[2px] border-[#380001] p-1 rounded-t-full rounded-b-sm shadow-lg bg-white/30 backdrop-blur-sm">
             <div className="absolute inset-0 rounded-t-full rounded-b-sm border border-brand-accent/10 m-0.5" />
             <img 
               src="https://b.top4top.io/p_3679j55am1.png" 
@@ -71,46 +71,45 @@ const Portal2 = ({ onNext, onBack }) => {
         </div>
 
         {/* Product Card Side */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-right order-2 md:order-2 flex-shrink min-h-0 pb-2 md:pb-0">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-right order-2 md:order-2 flex-shrink min-h-0 pb-1 md:pb-0">
           <motion.div 
-            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-3 md:p-8 rounded-sm shadow-lg max-w-lg w-full flex flex-col justify-center"
+            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-2 md:p-8 rounded-sm shadow-lg max-w-lg w-full flex flex-col justify-center"
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
             
-            <h2 className="text-2xl md:text-4xl font-bold text-brand-dark mb-1">عباية وارف</h2>
-            <p className="text-lg md:text-xl text-[#380001] mb-2 font-bold">199 ريال</p>
+            <h2 className="text-xl md:text-4xl font-bold text-brand-dark mb-0.5">عباية وارف</h2>
+            <p className="text-base md:text-xl text-[#380001] mb-1 font-bold">199 ريال</p>
             
             <div className="max-w-md mx-auto md:mx-0">
-              <p className="text-brand-dark/90 mb-3 leading-[1.6] text-xs md:text-base font-medium">
+              <p className="text-brand-dark/90 mb-2 leading-[1.4] text-xs md:text-base font-medium">
                 عباية صُممت لتوازن بين الفخامة والراحة…<br/>
                 قصة ناعمة تُبرز الأناقة بدون تكلّف.<br/>
                 مثالية لطلّتك اليومية الراقية.
               </p>
             </div>
             
-            <div className="flex flex-col gap-2 w-full mb-2 md:mb-0">
+            <div className="flex flex-col gap-1 w-full mb-1 md:mb-0">
               <a 
                 href="https://wa.me/?text=مرحبا، أود طلب عباية وارف" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-2 md:py-3 rounded-sm transition-all text-sm md:text-lg flex items-center justify-center gap-2 border border-[#2a0001] shadow-md font-bold"
+                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-1.5 md:py-3 rounded-sm transition-all text-sm md:text-lg flex items-center justify-center gap-2 border border-[#2a0001] shadow-md font-bold"
               >
                 اطّلبيها الآن على واتساب
-
               </a>
               
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="w-full bg-transparent hover:bg-brand-accent/10 text-brand-dark border-2 border-brand-accent/40 hover:border-brand-accent py-3 rounded-sm transition-all font-semibold"
+                className="w-full bg-transparent hover:bg-brand-accent/10 text-brand-dark border-2 border-brand-accent/40 hover:border-brand-accent py-1.5 md:py-3 rounded-sm transition-all font-semibold text-xs md:text-base"
               >
                 عرض مواصفات العباية
               </button>
               
               <button 
                 onClick={onNext}
-                className="w-full mt-3 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-3 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-2"
+                className="w-full mt-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-1.5 md:py-3 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-2 text-xs md:text-base"
               >
                 <span>حابة تشوفي اكثر من صور العباية؟</span>
                 <span className="text-lg">←</span>
