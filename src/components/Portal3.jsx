@@ -31,25 +31,27 @@ const Portal3 = ({ onNext, onBack }) => {
            style={{ backgroundImage: 'radial-gradient(#380001 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
       {/* Header */}
-      <div className="relative z-10 w-full p-6 flex justify-between items-center bg-white/50 backdrop-blur-sm border-b border-[#380001]/10">
-        <button 
-          onClick={onBack}
-          className="flex items-center gap-2 text-[#380001] font-bold hover:opacity-70 transition-opacity"
-        >
-          <span className="text-xl">→</span>
-          <span>رجوع</span>
-        </button>
-        <h2 className="text-2xl font-bold text-[#380001]">معرض وارف</h2>
-        <div className="w-16"></div> {/* Spacer for centering */}
+      <div className="relative z-10 w-full p-6 flex items-center bg-white/50 backdrop-blur-sm border-b border-[#380001]/10">
+        <div className="flex-1 flex justify-start">
+           <button 
+            onClick={onBack}
+            className="flex items-center gap-2 text-[#380001] font-bold hover:opacity-70 transition-opacity"
+          >
+            <span className="text-xl">→</span>
+            <span>رجوع</span>
+          </button>
+        </div>
+        <h2 className="text-2xl font-bold text-[#380001] absolute left-1/2 transform -translate-x-1/2">معرض وارف</h2>
+        <div className="flex-1"></div>
       </div>
 
       {/* Gallery Grid */}
       <div className="flex-1 overflow-y-auto p-4 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 max-w-6xl mx-auto">
           {images.map((img, index) => (
             <motion.div 
               key={index}
-              className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg border border-[#380001]/10 group cursor-pointer"
+              className="relative aspect-square rounded-lg overflow-hidden shadow-sm border border-[#380001]/10 group cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -58,25 +60,11 @@ const Portal3 = ({ onNext, onBack }) => {
               <img 
                 src={img} 
                 alt={`Warf Gallery ${index + 1}`} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                <span className="text-white font-bold tracking-wider">تفاصيل العباية</span>
-              </div>
             </motion.div>
           ))}
         </div>
-      </div>
-
-      {/* Next Button Area */}
-      <div className="p-6 bg-white/80 backdrop-blur-md border-t border-[#380001]/10 flex justify-center">
-        <button 
-          onClick={onNext}
-          className="bg-[#380001] text-white px-8 py-3 rounded-sm font-bold shadow-lg hover:bg-[#500002] transition-colors flex items-center gap-3 text-lg"
-        >
-          <span>تواصل معنا</span>
-          <span>←</span>
-        </button>
       </div>
     </motion.div>
   );
