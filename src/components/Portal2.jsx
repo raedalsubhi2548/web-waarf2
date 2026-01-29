@@ -50,16 +50,16 @@ const Portal2 = ({ onNext, onBack }) => {
       </button>
 
       {/* Top Title - Non-negotiable */}
-      <div className="relative z-20 w-full text-center mt-1 flex-shrink-0">
-        <h2 className="text-xs md:text-xl font-bold text-brand-dark tracking-wide">
+      <div className="relative z-20 w-full text-center mt-0.5 flex-shrink-0">
+        <h2 className="text-[10px] md:text-xl font-bold text-brand-dark tracking-wide">
           تصميم وارف الحصري
         </h2>
       </div>
 
-      <div className="relative z-10 w-full flex-1 max-w-lg mx-auto flex flex-col items-center justify-center gap-1 p-2 min-h-0">
+      <div className="relative z-10 w-full flex-1 max-w-lg mx-auto flex flex-col items-center justify-center gap-0.5 p-1 min-h-0">
         
         {/* Model Side - Significantly reduced height */}
-        <div className="w-full flex items-center justify-center flex-shrink-1 h-[28vh]">
+        <div className="w-full flex items-center justify-center flex-shrink-1 h-[25vh]">
           <div className="relative h-full w-auto aspect-[3/4] border-[1px] border-[#380001] p-0.5 rounded-t-[1.5rem] rounded-b-sm shadow-sm bg-white/30 backdrop-blur-sm">
             <div className="absolute inset-0 rounded-t-[1.5rem] rounded-b-sm border border-brand-accent/10 m-0.5" />
             <img 
@@ -73,44 +73,44 @@ const Portal2 = ({ onNext, onBack }) => {
         {/* Product Card Side */}
         <div className="w-full flex flex-col items-center text-center flex-shrink-0">
           <motion.div 
-            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-1.5 rounded-sm shadow-sm w-full flex flex-col justify-center"
+            className="bg-white/60 backdrop-blur-md border border-brand-accent/10 p-1 rounded-sm shadow-sm w-full flex flex-col justify-center"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             
             <div className="flex items-baseline justify-center gap-2 mb-0.5">
-              <h2 className="text-base font-bold text-brand-dark">عباية وارف</h2>
-              <p className="text-sm text-[#380001] font-bold">199 ريال</p>
+              <h2 className="text-sm font-bold text-brand-dark">عباية وارف</h2>
+              <p className="text-xs text-[#380001] font-bold">199 ريال</p>
             </div>
             
-            <div className="max-w-xs mx-auto mb-1.5">
-              <p className="text-brand-dark/90 leading-tight text-[9px] font-medium">
+            <div className="max-w-xs mx-auto mb-1">
+              <p className="text-brand-dark/90 leading-tight text-[8px] font-medium">
                 عباية صُممت لتوازن بين الفخامة والراحة… قصة ناعمة تُبرز الأناقة بدون تكلّف.
               </p>
             </div>
             
-            <div className="flex flex-col gap-1 w-full">
+            <div className="flex flex-col gap-0.5 w-full">
               <a 
                 href="https://wa.me/?text=مرحبا، أود طلب عباية وارف" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-1.5 rounded-sm transition-all text-xs flex items-center justify-center gap-1 border border-[#2a0001] shadow-sm font-bold"
+                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-1 rounded-sm transition-all text-[10px] flex items-center justify-center gap-1 border border-[#2a0001] shadow-sm font-bold"
               >
                 اطّلبيها الآن على واتساب
               </a>
               
-              <div className="flex gap-1.5">
+              <div className="flex gap-1">
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="flex-1 bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-1.5 rounded-sm transition-all font-semibold text-[10px]"
+                  className="flex-1 bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-1 rounded-sm transition-all font-semibold text-[9px]"
                 >
                   عرض المواصفات
                 </button>
                 
                 <button 
                   onClick={onNext}
-                  className="flex-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-1.5 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-1 text-[10px]"
+                  className="flex-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-1 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-1 text-[9px]"
                 >
                   <span>صور العباية</span>
                   <span>←</span>

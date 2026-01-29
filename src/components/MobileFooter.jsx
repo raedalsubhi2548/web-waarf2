@@ -17,12 +17,9 @@ const MobileFooter = () => {
 
       {/* Payment Icons - Official SVGs/PNGs */}
       <div className="flex items-center gap-3 opacity-100 flex-row">
-        {/* Mada - Inline SVG for reliability */}
-        <div className="h-5 w-auto flex items-center">
-            <svg viewBox="0 0 50 16.7" className="h-full w-auto" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#005d67" d="M12.4 6.9c0 1.9-1.2 3.1-3 3.1h-.9V3.8h.9c1.8 0 3 1.2 3 3.1zm-3.9 4.3v4.4H6.3V1.6h2.2c3 0 5.2 1.9 5.2 5.3 0 3.3-2.2 5.2-5.2 5.2H8.5zM22.2 10l-.4-1.2h-3.4l-.4 1.2h-2.3l3-8.4h2.9l3 8.4h-2.4zm-1.1-3.2l-1-2.9-1 2.9h2zM33.6 1.6v8.4c0 3.3-2.2 5.3-5.2 5.3h-2.2V1.6h2.2c3 0 5.2 1.9 5.2 5.3 0 3.3-2.2 5.2-5.2 5.2H28.4V1.6h5.2zm-2.2 8.4c1.8 0 3-1.2 3-3.1 0-1.9-1.2-3.1-3-3.1h-.9v6.2h.9zM42.9 10l-.4-1.2h-3.4l-.4 1.2h-2.3l3-8.4h2.9l3 8.4h-2.4zm-1.1-3.2l-1-2.9-1 2.9h2z"/>
-              <path fill="#8e9193" d="M47.8 0c-1.2 0-2.2 1-2.2 2.2s1 2.2 2.2 2.2 2.2-1 2.2-2.2-1-2.2-2.2-2.2zm0 3.8c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/>
-            </svg>
+        {/* Mada - Official PNG */}
+        <div className="h-4 w-auto flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mada_Logo.svg/320px-Mada_Logo.svg.png" alt="Mada" className="h-full w-auto object-contain" />
         </div>
         
         {/* Visa */}
