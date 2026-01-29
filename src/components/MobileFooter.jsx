@@ -16,25 +16,28 @@ const MobileFooter = () => {
       </div>
 
       {/* Payment Icons - Official SVGs/PNGs */}
-      <div className="flex items-center gap-3 opacity-100 flex-row">
-        {/* Mada - Official PNG */}
-        <div className="h-4 w-auto flex items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mada_Logo.svg/320px-Mada_Logo.svg.png" alt="Mada" className="h-full w-auto object-contain" />
+      <div className="flex items-center gap-2 opacity-100 flex-row">
+        {/* Apple Pay */}
+        <div className="h-5 w-auto flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/320px-Apple_Pay_logo.svg.png" alt="Apple Pay" className="h-full w-auto object-contain" />
         </div>
-        
+
         {/* Visa */}
-        <div className="h-4 w-auto flex items-center">
+        <div className="h-3.5 w-auto flex items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/320px-Visa_Inc._logo.svg.png" alt="Visa" className="h-full w-auto object-contain" />
         </div>
 
         {/* MasterCard */}
-        <div className="h-6 w-auto flex items-center">
+        <div className="h-5 w-auto flex items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png" alt="Mastercard" className="h-full w-auto object-contain" />
         </div>
 
-        {/* Apple Pay */}
-        <div className="h-6 w-auto flex items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/320px-Apple_Pay_logo.svg.png" alt="Apple Pay" className="h-full w-auto object-contain" />
+        {/* Mada - Official SVG */}
+        <div className="h-4 w-auto flex items-center">
+            <svg viewBox="0 0 100 32" className="h-full w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="5" y="22" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#6C3B95">Mada</text>
+              <text x="48" y="22" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#4DAF4A">مدى</text>
+            </svg>
         </div>
       </div>
 
