@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Portal1 from './components/Portal1';
 import Portal2 from './components/Portal2';
+import Portal3 from './components/Portal3';
 import Portal4 from './components/Portal4';
 import PolicyScreen from './components/PolicyScreen';
 import MobileMenu from './components/MobileMenu';
