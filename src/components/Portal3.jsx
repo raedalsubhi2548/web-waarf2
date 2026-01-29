@@ -10,7 +10,10 @@ const portalVariants = {
 const Portal3 = ({ onNext, onBack }) => {
   const images = [
     "https://b.top4top.io/p_3679j55am1.png",
-    "https://b.top4top.io/p_3679j55am1.png", // Repeated for gallery effect as requested (same model images)
+    "https://b.top4top.io/p_3679j55am1.png",
+    "https://b.top4top.io/p_3679j55am1.png",
+    "https://b.top4top.io/p_3679j55am1.png",
+    "https://b.top4top.io/p_3679j55am1.png",
     "https://b.top4top.io/p_3679j55am1.png"
   ];
 

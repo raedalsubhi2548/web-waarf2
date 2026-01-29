@@ -106,6 +106,14 @@ const Portal2 = ({ onNext, onBack }) => {
               >
                 عرض مواصفات العباية
               </button>
+              
+              <button 
+                onClick={onNext}
+                className="w-full mt-3 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-3 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-2"
+              >
+                <span>حابة تشوفي اكثر من صور العباية؟</span>
+                <span className="text-lg">←</span>
+              </button>
             </div>
           </motion.div>
         </div>

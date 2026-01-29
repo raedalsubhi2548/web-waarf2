@@ -40,9 +40,11 @@ function App() {
       case 1:
         return <Portal1 key="portal1" onNext={() => goToPortal(2)} />;
       case 2:
-        return <Portal2 key="portal2" onNext={() => goToPortal(4)} onBack={() => goToPortal(1)} />;
+        return <Portal2 key="portal2" onNext={() => goToPortal(3)} onBack={() => goToPortal(1)} />;
+      case 3:
+        return <Portal3 key="portal3" onNext={() => goToPortal(4)} onBack={() => goToPortal(2)} />;
       case 4:
-        return <Portal4 key="portal4" onBack={() => goToPortal(2)} />;
+        return <Portal4 key="portal4" onBack={() => goToPortal(3)} />;
       case 'policy':
         return <PolicyScreen key="policy" onBack={() => goBack()} />;
       default:
