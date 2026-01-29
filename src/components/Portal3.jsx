@@ -45,23 +45,41 @@ const Portal3 = ({ onNext, onBack }) => {
         <div className="flex-1"></div>
       </div>
 
+      {/* Marketing Text */}
+      <div className="max-w-6xl mx-auto px-4 mb-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white/60 backdrop-blur-sm p-6 rounded-lg border border-[#380001]/10 shadow-sm"
+        >
+          <h3 className="text-xl font-bold text-[#380001] mb-2">أناقة تليق بك</h3>
+          <p className="text-[#380001]/80 leading-relaxed text-sm md:text-base">
+            تميزي بإطلالة ساحرة مع عباية وارف المصممة بعناية فائقة. نسيج فاخر ينساب بنعومة، وقصة عصرية تمنحك الراحة والثقة في كل خطوة. دقة في التفاصيل وجودة لا تضاهى لتكوني دائماً في أبهى حلة.
+          </p>
+        </motion.div>
+      </div>
+
       {/* Gallery Grid */}
-      <div className="flex-1 overflow-y-auto p-4 md:p-8">
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 max-w-6xl mx-auto">
+      <div className="flex-1 overflow-y-auto px-4 pb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {images.map((img, index) => (
             <motion.div 
               key={index}
-              className="relative aspect-square rounded-lg overflow-hidden shadow-sm border border-[#380001]/10 group cursor-pointer"
+              className="relative aspect-[3/4] p-3 bg-white rounded-sm shadow-md border border-[#380001]/10 group cursor-pointer hover:shadow-lg transition-all"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1 + 0.3 }}
               whileHover={{ scale: 1.02 }}
             >
-              <img 
-                src={img} 
-                alt={`Warf Gallery ${index + 1}`} 
-                className="w-full h-full object-cover"
-              />
+              <div className="w-full h-full border border-[#380001]/10 rounded-sm overflow-hidden relative">
+                <div className="absolute inset-0 border-[3px] border-white/50 z-10 pointer-events-none"></div>
+                <img 
+                  src={img} 
+                  alt={`Warf Gallery ${index + 1}`} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
