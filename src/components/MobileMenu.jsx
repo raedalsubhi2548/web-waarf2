@@ -6,6 +6,7 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
   const links = [
     { id: 1, label: 'الرئيسية' },
     { id: 2, label: 'المنتج' },
+    { id: 3, label: 'معرض وارف' },
     { id: 4, label: 'تواصل معنا' },
     { id: 'policy', label: 'سياسة الاستبدال' },
   ];

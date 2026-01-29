@@ -29,7 +29,8 @@ function App() {
     } else {
       // Default fallbacks if stack is empty (shouldn't happen)
       if (currentPortal === 'policy') setCurrentPortal(1);
-      else if (currentPortal === 4) setCurrentPortal(2);
+      else if (currentPortal === 4) setCurrentPortal(3);
+      else if (currentPortal === 3) setCurrentPortal(2);
       else if (currentPortal === 2) setCurrentPortal(1);
     }
   };
