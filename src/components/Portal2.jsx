@@ -30,7 +30,7 @@ const Portal2 = ({ onNext, onBack }) => {
 
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-[100dvh] flex flex-col items-center overflow-hidden bg-brand-light"
+      className="absolute inset-0 w-full h-[100dvh] flex flex-col items-center overflow-y-auto bg-brand-light"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)', paddingTop: 'env(safe-area-inset-top)' }}
       variants={portalVariants}
       initial="initial"

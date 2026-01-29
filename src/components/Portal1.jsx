@@ -30,7 +30,7 @@ const portalVariants = {
 const Portal1 = ({ onNext }) => {
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-[100dvh] flex items-center justify-center p-6 overflow-hidden"
+      className="absolute inset-0 w-full h-[100dvh] flex items-center justify-center p-6 overflow-y-auto"
       variants={portalVariants}
       initial="initial"
       animate="animate"
