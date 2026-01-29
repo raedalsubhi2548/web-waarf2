@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  html, body, button, input, textarea, h1, h2, h3, h4, h5, h6, p, a, li, span {
+  html, body {
     @apply h-full w-full overflow-hidden bg-brand-light text-brand-dark antialiased;
+    font-family: 'Tajawal', system-ui, sans-serif;
+  }
+  
+  /* Apply font family to other elements without forcing layout properties */
+  button, input, textarea, h1, h2, h3, h4, h5, h6, p, a, li, span {
     font-family: 'Tajawal', system-ui, sans-serif;
   }
   
