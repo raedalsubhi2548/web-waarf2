@@ -113,7 +113,7 @@ const Portal2 = ({ onNext, onBack }) => {
               
               {/* 3️⃣ ثالثاً: اطلبيها الآن على واتساب */}
               <a 
-                href="https://wa.me/?text=مرحباً، أود طلب عباية وارف" 
+                href="https://api.whatsapp.com/send/?phone=966555488045&text&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full bg-[#380001] hover:bg-[#500002] text-white py-3 rounded-sm transition-all text-base flex items-center justify-center gap-2 border border-[#2a0001] shadow-md font-bold"
