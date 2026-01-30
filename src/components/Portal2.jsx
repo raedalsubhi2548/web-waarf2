@@ -91,31 +91,29 @@ const Portal2 = ({ onNext, onBack }) => {
             </div>
             
             <div className="flex flex-col gap-0.5 w-full">
+              <button 
+                onClick={onNext}
+                className="w-full bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-0.5 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-0.5 text-[9px]"
+              >
+                <span>حابة تشوفي اكثر من صور العباية؟</span>
+                <span>←</span>
+              </button>
+              
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="w-full bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-0.5 rounded-sm transition-all font-semibold text-[9px]"
+              >
+                عرض مواصفات العباية
+              </button>
+              
               <a 
                 href="https://wa.me/?text=مرحبا، أود طلب عباية وارف" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full bg-[#380001] hover:bg-[#500002] text-white py-0.5 rounded-sm transition-all text-[9px] flex items-center justify-center gap-1 border border-[#2a0001] shadow-sm font-bold"
               >
-                اطّلبيها الآن على واتساب
+                اطلبيها الآن على واتساب
               </a>
-              
-              <div className="flex gap-0.5">
-                <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="flex-1 bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-0.5 rounded-sm transition-all font-semibold text-[8px]"
-                >
-                  عرض المواصفات
-                </button>
-                
-                <button 
-                  onClick={onNext}
-                  className="flex-1 bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-0.5 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-0.5 text-[8px]"
-                >
-                  <span>صور العباية</span>
-                  <span>←</span>
-                </button>
-              </div>
             </div>
           </motion.div>
         </div>
