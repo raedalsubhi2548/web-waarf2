@@ -45,7 +45,7 @@ const Portal2 = ({ onNext, onBack }) => {
         onClick={onBack}
         className="fixed top-4 left-4 z-50 bg-white/80 backdrop-blur-md border border-[#380001]/20 text-[#380001] px-3 py-1.5 rounded-full font-bold shadow-md hover:bg-[#380001] hover:text-white transition-all flex items-center gap-2 group text-sm"
       >
-        <span className="group-hover:-translate-x-1 transition-transform">→</span>
+        <span className="group-hover:-translate-x-1 transition-transform">←</span>
         <span>رجوع</span>
       </button>
 
@@ -86,34 +86,41 @@ const Portal2 = ({ onNext, onBack }) => {
             
             <div className="max-w-xs mx-auto mb-0.5">
               <p className="text-brand-dark/90 leading-tight text-[7px] font-medium">
-                عباية صُممت لتوازن بين الفخامة والراحة… قصة ناعمة تُبرز الأناقة بدون تكلّف.
+                عباية صُممت لتوازن بين الفخامة والراحة… قصة ناعمة تُبرز الأناقة بدون تكلّف، وتفاصيل هادئة تخلّي حضورك يسبقك.
+                مثالية لطلّتك اليومية الراقية... وللمناسبات اللي تبغي فيها ستايل بيان من أول نظرة
               </p>
             </div>
             
-            <div className="flex flex-col gap-0.5 w-full">
+            {/* === الترتيب الجديد === */}
+            <div className="flex flex-col gap-2 w-full">
+              
+              {/* 1️⃣ أولاً: حابة تشوفي أكثر من صور العباية؟ */}
               <button 
                 onClick={onNext}
-                className="w-full bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-0.5 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-0.5 text-[9px]"
+                className="w-full bg-[#fdfaf1] hover:bg-[#f0eadd] text-[#380001] border border-[#380001]/20 py-3 rounded-sm transition-all font-bold shadow-sm flex items-center justify-center gap-2 text-base"
               >
                 <span>حابة تشوفي اكثر من صور العباية؟</span>
-                <span>←</span>
+                <span className="text-lg">←</span>
               </button>
               
+              {/* 2️⃣ ثانياً: عرض مواصفات العباية */}
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="w-full bg-transparent hover:bg-brand-accent/5 text-brand-dark border border-brand-accent/30 hover:border-brand-accent py-0.5 rounded-sm transition-all font-semibold text-[9px]"
+                className="w-full bg-transparent hover:bg-brand-accent/10 text-brand-dark border-2 border-brand-accent/40 hover:border-brand-accent py-3 rounded-sm transition-all font-semibold text-base"
               >
                 عرض مواصفات العباية
               </button>
               
+              {/* 3️⃣ ثالثاً: اطلبيها الآن على واتساب */}
               <a 
-                href="https://wa.me/?text=مرحبا، أود طلب عباية وارف" 
+                href="https://wa.me/?text=مرحباً، أود طلب عباية وارف" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-0.5 rounded-sm transition-all text-[9px] flex items-center justify-center gap-1 border border-[#2a0001] shadow-sm font-bold"
+                className="w-full bg-[#380001] hover:bg-[#500002] text-white py-3 rounded-sm transition-all text-base flex items-center justify-center gap-2 border border-[#2a0001] shadow-md font-bold"
               >
                 اطلبيها الآن على واتساب
               </a>
+              
             </div>
           </motion.div>
         </div>
