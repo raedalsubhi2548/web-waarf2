@@ -50,8 +50,8 @@ const Portal2 = ({ onNext, onBack }) => {
       </button>
 
       {/* Top Title - Non-negotiable */}
-      <div className="relative z-20 w-full text-center mt-0.5 flex-shrink-0">
-        <h2 className="text-[10px] md:text-xl font-bold text-brand-dark tracking-wide">
+      <div className="relative z-20 w-full text-center mt-2 flex-shrink-0">
+        <h2 className="text-lg md:text-2xl font-bold text-brand-dark tracking-wide">
           تصميم وارف الحصري
         </h2>
       </div>
@@ -79,15 +79,15 @@ const Portal2 = ({ onNext, onBack }) => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             
-            <div className="flex items-baseline justify-center gap-1.5 mb-0">
-              <h2 className="text-xs font-bold text-brand-dark">عباية وارف</h2>
-              <p className="text-[10px] text-[#380001] font-bold">199 ريال</p>
+            <div className="flex items-baseline justify-center gap-2 mb-1">
+              <h2 className="text-lg md:text-2xl font-bold text-brand-dark">عباية وارف</h2>
+              <p className="text-sm md:text-lg text-[#380001] font-bold">199 ريال</p>
             </div>
             
-            <div className="max-w-xs mx-auto mb-0.5">
-              <p className="text-brand-dark/90 leading-tight text-[7px] font-medium">
+            <div className="max-w-md mx-auto mb-2">
+              <p className="text-brand-dark/90 leading-relaxed text-xs md:text-sm font-medium">
                 عباية صُممت لتوازن بين الفخامة والراحة… قصة ناعمة تُبرز الأناقة بدون تكلّف، وتفاصيل هادئة تخلّي حضورك يسبقك.
-                مثالية لطلّتك اليومية الراقية... وللمناسبات اللي تبغي فيها ستايل بيان من أول نظرة
+                <br />مثالية لطلّتك اليومية الراقية... وللمناسبات اللي تبغي فيها ستايل يبان من أول نظرة
               </p>
             </div>
             

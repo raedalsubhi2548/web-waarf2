@@ -32,12 +32,9 @@ const MobileFooter = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png" alt="Mastercard" className="h-full w-auto object-contain" />
         </div>
 
-        {/* Mada - Official SVG */}
-        <div className="h-4 w-auto flex items-center">
-            <svg viewBox="0 0 100 32" className="h-full w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="5" y="22" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#6C3B95">Mada</text>
-              <text x="48" y="22" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#4DAF4A">مدى</text>
-            </svg>
+        {/* Mada - Official PNG */}
+        <div className="h-5 w-auto flex items-center">
+            <img src="https://g.top4top.io/p_368112tsb1.png" alt="Mada" className="h-full w-auto object-contain" />
         </div>
       </div>
 
